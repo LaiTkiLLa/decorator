@@ -23,19 +23,4 @@ def parametrized_decor(parameter):
 
 
 
-# def parametrized_decor(parameter):
-#     def decor(foo):
-#         def new_foo(*args, **kwars):
-#             # здесь код до вызовы функции
-#             result = foo(*args, **kwars)
-#             # здесь код после вызовы функции
-#             return result
-#
-#         return new_foo
-#
-#     return decor
-#
-#
-# @parametrized_decor(parameter=path)
-# def foo():
-#     pass
+
