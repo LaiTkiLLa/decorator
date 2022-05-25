@@ -1,10 +1,14 @@
-from decorator import logger
+from decorator import parametrized_decor
 import requests
+
 
 url = "https://superheroapi.com/api/2619421814940190/search/"
 heronames = [{'name' : 'Hulk'}, {'name' : 'Captain America'}, {'name' : 'Thanos'}]
+path = 'C:\\Users\\f.burov\\Desktop\\logs.txt'
 
 
+
+@parametrized_decor(parameter=path)
 def intelligence():
     for name in heronames:
         hero_r = requests.get(url + name['name'])
@@ -14,6 +18,6 @@ def intelligence():
     return f'Самый умный супергерой {iq}'
 
 
-result = logger(intelligence)
-result()
+intelligence()
+
 
